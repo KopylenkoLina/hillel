@@ -1,0 +1,141 @@
+.main-container {
+	position: relative;
+	.sidebar-on &{
+		@media(min-width: 840px) {
+			padding-left: 250px;
+		}
+	}
+	.toggle-sidebar {
+		@media(min-width: 840px){
+			display: block;
+	    padding: 5px 10px;
+	    margin: 0 30px;
+	    position: absolute;
+	    top: 25px;
+	    cursor: pointer;
+	    border-radius: 30px;
+	    color: $font-color;
+	    border: 1px solid $font-color;
+	    font-size: 12px;
+	    transition: all .2s;
+	    &:hover {
+	    	background-color: #f8e8e5;
+				border: 1px solid #f8e8e5;
+				color: #826464;
+	    }
+	    &:focus{
+	    	outline: none;
+	    }
+	  }
+	  &:after {
+	  	content: 'open';
+	  }
+	  .sidebar-on &{
+			@media(min-width: 840px) {
+				&:after {
+					content: 'close';
+				}
+			}
+		}
+	}
+}
+.section-inner {
+	padding: 0 3%;
+	@media(min-width: 840px){
+		padding: 0 120px;
+	}
+}
+.article-wrap {
+	padding: 20px 0;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	.article-header {
+		font-size: 29px;
+		line-height: 40px;
+		margin-bottom: 20px;
+		font-weight: bold;
+		text-align: center;
+		@include mQuery(narrow_tablet){
+	    font-size: 35px;
+	    text-align: left;        
+	  }
+	}
+	.article-subheader {
+		font-size: 20px;
+		font-weight: bold;
+		margin-bottom: 20px;
+		text-align: center;
+		@include mQuery(narrow_tablet){
+	    font-size: 25px;
+	    text-align: left;        
+	  }
+	}
+	p, ul, li {
+		font-size: 14px;
+		line-height: 25px;
+		margin-bottom: 20px;
+	}
+	.article-important {
+		padding: 15px;
+		margin: 15px 0;
+    border: 3px solid #f5f2f0;
+    border-radius: 6px;
+		h4 {
+			font-size: 16px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		ul {
+			list-style-type: disc;
+			padding-left: 20px;
+		}
+	}
+}
+.sidebar-wrap {
+	display: none;
+	@media(min-width: 840px){
+    display: block;
+    background-color: $main-color-light;
+		position: fixed;
+	  left: -253px;
+	  width: 250px;
+	  overflow: auto;
+	  top: 55px;
+	  height: 100%;
+	  .sidebar-on & {
+			left: 0;
+		}
+  }
+}
+
+.toggle-sidebar {
+	display: none;
+	@media(min-width: 840px) {
+		display: block;
+	}
+}
+
+.sidebar {
+	@media(min-width: 840px){         
+  	height: calc(100% - 55px);
+  	padding: 20px;
+  }
+  .sidebar-title {
+  	color: #c4c2c0;
+  }
+  .sidebar-nav-link,
+  .sidebar-title {
+  	line-height: 20px;
+  	margin-bottom: 10px;
+  	.link-item {
+  	color: $font-color;
+	  	&:hover {
+	  		color: $hov-text-color;
+	  	}
+  	}
+  }
+  .share-item {
+  	display: block;
+  }	
+}

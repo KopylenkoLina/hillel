@@ -1,0 +1,45 @@
+
+@mixin mQuery($size) {
+  @if $size == mobile {
+    @media screen and (min-width: 320px) and (min-device-width: 320px) { //320px 20rem
+      @content;
+    }
+  }
+  @if $size == iphone_6 {
+    @media screen and (min-width: 375px) and (min-device-width: 375px) {
+      @content;
+    }
+  }
+  @if $size == iphone_6_plus {
+    @media screen and (min-width: 414px) and (min-device-width: 414px) {
+      @content;
+    }
+  }
+  @if $size == wide_mobile {
+    @media screen and (min-width: 560px) and (min-device-width: 560px) {
+      @content;
+    }
+  }
+  @if $size == narrow_tablet {
+    @media screen and (min-width: 760px) and (min-device-width: 760px) {
+      @content;
+    }
+  }
+  @else if $size == tablet { 
+    @media screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  @else if $size == desktop {
+    @media screen and (min-width: 1281px) and (min-device-width: 1281px) {
+      @content;
+    }
+  }
+
+  @else if $size == big_screen {
+    @media screen and (min-width: 1450px) and (min-device-width: 1450px) {
+      @content;
+    }
+  }
+}

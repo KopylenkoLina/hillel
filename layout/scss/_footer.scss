@@ -1,0 +1,43 @@
+.footer {
+	color: #9d9d9d;
+	background: #fbfafa;
+	border-top: 2px solid #f3f2f1;
+	text-align: center;
+	padding: 20px;
+	overflow: hidden;
+  .sidebar-on &{
+		padding-left: 270px;
+	}
+  @include mQuery(narrow_tablet) {
+  	text-align: left;
+  	padding: 20px 3%;
+  }
+	.link-wrap, .footer-link, .footer-text{
+    display: block;
+    @include mQuery(narrow_tablet) {
+    	display: inline-block;
+    }
+	}
+	.footer-link:before {
+		@include mQuery(narrow_tablet) {
+			content: '|';
+			margin:0 10px;
+		}
+	}
+	.desk-left,
+	.desk-right {
+		@include mQuery(narrow_tablet) {
+			display: block;
+		}
+	}
+	.desk-left {
+		@include mQuery(desktop) {
+			float: left;
+		}
+	}
+	.desk-right {
+		@include mQuery(desktop) {
+			float: right;
+		}
+	}
+}
