@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var mathOperations = {
+        validatePassword: function(userPassword) {
+            let passwordObj = {
+                length: null,
+                isHavingDigits: false,
+                isHavingSymbols: false,
+                result: 'VALID'
+            };
+            passwordObj.length = userPassword.length;
+
+            for (let i = 0; i < userPassword.length; i++) {
+                const charElementCode = userPassword[i].charCodeAt(0);
+                if ((charElementCode > 64 && charElementCode < 91) || (charElementCode > 96 && charElementCode < 123)) {
+                    if (!passwordObj.isHavingSymbols)
+                        passwordObj.isHavingSymbols = true;
+                } else
+                if (charElementCode > 47 && charElementCode < 58) {
+                    if (!passwordObj.isHavingDigits)
+                        passwordObj.isHavingDigits = true;
+                } 
+                else passwordObj.result = 'INVALID'
+            }
+            return (passwordObj.length >= 6 && passwordObj.length <= 20) && passwordObj.result === 'VALID' && passwordObj.isHavingDigits && passwordObj.isHavingSymbols
+            ? 'VALID' 
+            : 'INVALID';
+        },
+        checkNumber: function(number) {
+
+            if(isNaN(number)) {
+                return false;
+            }
+            let numberObj = {
+                simple: true
+            };
+
+            if (number <= 0) {
+                numberObj.simple = false;
+            } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                        numberObj.simple = false;
+                        break;
+                    }
+                }
+            }
+            number % 2 === 0
+            ? numberObj.even = true 
+            : numberObj.even = false;
+
+
+            number % 10 === 0
+            ? numberObj.devidedOnTen = true 
+            : numberObj.devidedOnTen = false;
+
+            console.log(numberObj);
+            return numberObj.simple || numberObj.even || numberObj.devidedOnTen 
+            ? true 
+            : false;
+        },
+        sumNumbers: function(firstNumber, secondNumber) {
+            if (isNaN(firstNumber) || isNaN(secondNumber)) {
+                return alert('Please enter numbers!');
+            }
+            firstNumber.length - secondNumber.length > 0
+            ? secondNumber = Array(firstNumber.length - secondNumber.length + 1).join('0').concat(secondNumber)
+            : firstNumber = Array(secondNumber.length - firstNumber.length + 1).join('0').concat(firstNumber);
+
+            let rest = 0;
+            let sum = '';
+            for (let i = firstNumber.length - 1; i >= 0 ; i-- ) {
+                currentDigitsSum = +firstNumber[i] + +secondNumber[i] + rest;
+                currentDigitsSum <= 9
+                ? sum += currentDigitsSum
+                : sum += currentDigitsSum - 10;
+                currentDigitsSum <= 9
+                ? rest = 0
+                : rest = 1;
+            }
+            if (rest) sum += rest;
+            sum = sum.split('').reverse().join('');
+            alert(`Your sum is ${sum}!!!`);
+        },
+        checkNumberSection: function(number) {
+            if (number !== null) {
+                this.checkNumber(number) === true
+                ? this.checkNumbersSum()
+                : alert('Number is incorrect!');
+            } else {
+                alert('Number is not entered!');
+            }   
+        },
+        checkNumbersSum: function(){
+            let firstNumber = prompt('Enter first number');
+            if (firstNumber !== null) {
+                let secondNumber = prompt('Enter second number');
+                secondNumber !== null
+                ? this.sumNumbers(firstNumber, secondNumber)
+                : alert('Second number is not entered!');
+            } else {
+                alert('First number is not entered!');
+            }
+        }
+    };
+
+    var userPassword = prompt('Enter a valid password');
+    if (userPassword !== null) {
+        mathOperations.validatePassword(userPassword) === 'VALID'
+        ? mathOperations.checkNumberSection(prompt('Enter a number'))
+        : alert('Password is not valid!')
+    } else {
+        alert('Password is not entered!');
+    }
+    
+    </script>
+</body>
+</html>
