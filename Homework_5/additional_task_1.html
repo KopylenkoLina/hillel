@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+	
+	function cakes (recipe, availableIngridients) {
+		let currentList = [];
+		let recipeIngridientsList = [];
+ 
+		for (let ingridient in recipe) {
+  			recipeIngridientsList.push(ingridient);
+		}
+
+		recipeIngridientsList.forEach(ingridient => {
+    		currentList.push(Math.floor(availableIngridients[ingridient] / recipe[ingridient]));
+
+ 		});
+		return Math.min.apply(null, currentList);
+		
+	}
+	console.log(cakes({flour: 500, suggar: 200, eggs: 1}, {flour: 1200, suggar: 1200, eggs: 5, milk: 200}));
+	</script>
+</body>
+</html>
