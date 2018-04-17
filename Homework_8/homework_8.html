@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// Это пока только примерно как делать
+		var maths = {
+			number: 10,
+			sum: function() {
+				this.number++;
+				return this;
+			},
+			minus: function() {
+				this.number--;
+				return this;
+			},
+			multiplay: function() {
+				this.number * this.number;
+				return this;
+			},
+			showResult: function() {
+				console.log(this.number);
+				return this;
+			}
+		}
+		console.log(maths.sum().sum().minus().multiplay().showResult());
+
+		// два способа вывода чисел 
+		
+		for (let i = 0; i < 10; i++) {
+   			setTimeout(function() {
+       			console.log(i);
+   			}, 10)
+		}
+		
+		
+
+		for (var i = 0; i < 5; i++) {
+    		(function (i) {
+        		setTimeout(function () {
+            		console.log(i)
+        		}, 1000);
+    		})(i);
+		}
+	
+
+	</script>
+</body>
+</html>
