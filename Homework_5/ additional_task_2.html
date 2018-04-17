@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+
+
+function tickets (personeInQueue) {
+	let bill25 = 0;
+	let bill50 = 0;
+
+	for (let i = 0; i < personeInQueue.length; i++) {
+		if (personeInQueue[i] === 25) {
+			bill25 ++;
+		} else if (personeInQueue[i] === 50) {
+			if (bill25) {
+				bill25 --;
+				bill50 ++;
+			} else {
+				return "NO"; 
+			}
+		} else if (personeInQueue[i] === 100) {
+			if (bill25 && bill50) {
+				bill25 --;
+				bill50 --;
+			} else if (bill25 > 2) {
+				bill25 -=3;
+			} else {
+				return "NO";
+			}
+		}
+	}
+	
+	return "YES";
+}
+
+console.log(tickets([25, 100]));
+
+	</script>
+
+</body>
+</html>
