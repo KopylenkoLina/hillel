@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let totalStudentList = [
+			{
+				name: 'Vasya',
+				start: 2000,
+				end: 2005
+			},
+			{
+				name: 'Petya',
+				start: 1999,
+				end: 2004
+			},
+			{
+				name: 'Dasha',
+				start: 2000,
+				end: 2005
+			},
+			{
+				name: 'Masha',
+				start: 1999,
+				end: 2004
+			},
+			{
+				name: 'Sasha',
+				start: 2000,
+				end: 2005
+			},
+			{
+				name: 'Ivan',
+				start: 2000,
+				end: 2005
+			},
+			{
+				name: 'Alexey',
+				start: 2000,
+				end: 2005
+			},
+			{
+				name: 'Pavel',
+				start: 1999,
+				end: 2004
+			},
+			{
+				name: 'Katya',
+				start: 2001,
+				end: 2006
+			},
+			{
+				name: 'Seva',
+				start: 2002,
+				end: 2007
+			}
+		];
+
+		function studentsListForPeriod (start, end, isArray) {
+			let currentStudentList = [];
+
+			totalStudentList.forEach( item => {
+				if (item.start === start && item.end === end) {
+					currentStudentList.push(item.name);
+				}
+			});
+			if (isArray) {
+				return currentStudentList;
+			} else {
+				return currentStudentList.join(', ');
+			}
+		}
+		console.log(studentsListForPeriod(2000, 2005));
+
+		// function maxMumberOfPeriod (start, end) {
+		// 	periodResult = {};
+		// 	studentsQuantity = 0;
+
+		// 	totalStudentList.forEach( item => {
+		// 		if (item.start >= start && item.end <= end) {
+		// 			periodResult.period = ;
+		// 		}
+		// 	});
+
+		// 	return periodResult;
+		// }
+		// console.log(maxMumberOfPeriod(1999, 2005));
+	</script>
+</body>
+</html>
