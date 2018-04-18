@@ -6,27 +6,29 @@
 </head>
 <body>
 	<script type="text/javascript">
-		// Это пока только примерно как делать
+
 		var maths = {
-			number: 10,
+			number: 3,
 			sum: function() {
-				this.number++;
+				this.number = ++this.number;
 				return this;
+
 			},
 			minus: function() {
-				this.number--;
+				this.number = --this.number;
 				return this;
 			},
 			multiplay: function() {
-				this.number * this.number;
+				this.number *= this.number;
 				return this;
 			},
 			showResult: function() {
-				console.log(this.number);
-				return this;
+				return this.number;
 			}
 		}
-		console.log(maths.sum().sum().minus().multiplay().showResult());
+
+		console.log(maths.multiplay().sum().minus().multiplay().sum().showResult());
+		
 
 		// два способа вывода чисел 
 		
@@ -37,8 +39,7 @@
 		}
 		
 		
-
-		for (var i = 0; i < 5; i++) {
+		for (var i = 0; i < 10; i++) {
     		(function (i) {
         		setTimeout(function () {
             		console.log(i)
