@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// Task number 1
+		function sum() {
+  			return [].reduce.call(arguments, function(a, b) {
+    			return a + b;
+  			});
+		}
+
+		function mul() {
+		  return [].reduce.call(arguments, function(a, b) {
+		    return a * b;
+		  });
+		}
+
+		function applyAll(func) {
+    		return func.apply(this, [].slice.call(arguments, 1));
+  		}
+
+		console.log(applyAll(sum, 1, 2, 4)); 
+		console.log(applyAll(mul, 1, 2, 4)); 
+
+		// Task number 2
+		function fibonacci (n) {
+			return n <= 1 ? n : fibonacci(n-1) + fibonacci(n-2);
+		}
+		console.log(fibonacci(6));
+	</script>
+</body>
+</html>

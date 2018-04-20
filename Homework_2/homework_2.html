@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var currentApplePrice = 12.50;
+	var purchaseOrangePrice = 12.50;
+
+	var discount = 0.15;
+	var extraCharge = 0.15;
+
+	var appleResult = (currentApplePrice - (currentApplePrice * discount)).toFixed(2);
+	var orangeResult = (purchaseOrangePrice + (purchaseOrangePrice * extraCharge)).toFixed(2);
+
+	//ценник для яблок
+	console.log (`Яблоки украинские \n цена ${appleResult} грн`);
+	console.log ('Яблоки украинские \n цена ' + appleResult + ' грн');
+
+	//ценник для апельсин
+	console.log (`Aпельсины испанские \n цена ${orangeResult} грн`);
+	console.log ('Апельсины испанские \n цена ' + orangeResult + ' грн');
+	</script>
+	
+</body>
+</html>

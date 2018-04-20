@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+// Task 2
+	// It's beautiful day. I like "free day"
+	// 1 
+	console.log('It \'s beautiful day. I like "free day"');
+	// 2 
+	console.log('It \'s beautiful day. I like \'free day\'');
+	// 3 
+	console.log("It's beautiful day. I like \"free day \"");
+	// 4 
+	console.log("It's beautiful day. I like 'free day'");
+	// 5 
+	console.log("It's beautiful day. I like \"free day \\\"");
+
+// Task 3
+	var a = 5.45; 
+	var b = 8.3;
+	var result = a*b;
+
+	console.log(+result.toFixed(10));
+// Task 4
+// Нужно преобразовать 1-й аргумент к числу. Для это можно перед строкой “string” поставить унарный +. Если строка не является в точности числом то мы получим NaN.
+
+console.log( +"string" + 2); 
+
+// Также мы можем использовать функции parseInt() и parseFloat(), которые также преобразуют строку в число (целое или дробное). Если первый символ не сможет сконвертироваться в число мы получим NaN.
+
+console.log(parseFloat("string") + 2);
+console.log(parseInt("string") + 2);
+	</script>
+</body>
+</html>

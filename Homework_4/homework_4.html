@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	let firstNumber = '123';
+	let secondNumber = '999';
+
+	firstNumber.length - secondNumber.length > 0
+		? secondNumber = Array(firstNumber.length - secondNumber.length + 1).join('0').concat(secondNumber)
+		: firstNumber = Array(secondNumber.length - firstNumber.length + 1).join('0').concat(firstNumber);
+
+	let rest = 0;
+	let sum = '';
+	for (let i = firstNumber.length - 1; i >= 0 ; i-- ) {
+   		currentDigitsSum = +firstNumber[i] + +secondNumber[i] + rest;
+    	currentDigitsSum <= 9
+		    ? sum += currentDigitsSum
+		    : sum += currentDigitsSum - 10;
+    	currentDigitsSum <= 9
+		    ? rest = 0
+		    : rest = 1;
+	}
+	if (rest)
+ 	sum += rest;
+	console.log(sum.split('').reverse().join(''));
+	</script>
+</body>
+</html>

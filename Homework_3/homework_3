@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var currentApplePrice = 12.50;
+	var userDiscount = 15;
+	var discount = userDiscount / 100;
+
+
+	var appleResult = (typeof discount !== 'undefined')
+  		? (currentApplePrice - (currentApplePrice * discount)).toFixed(2)
+  		: currentApplePrice.toFixed(2);
+	console.log(`Яблоки украинские \n цена ${appleResult} грн`)
+
+
+
+	var label = `Яблоки украинские цена ${appleResult} грн`;
+
+	if (label.length < 10) {
+	  var i = 0;
+	  while(i < label.length){
+	    console.log(label[i]);
+	    i++;
+	  }
+	  label.split("");
+	} else {
+	  console.log (label.substr(0,7), label.substring(10));
+	}
+	</script>
+	
+</body>
+</html>
