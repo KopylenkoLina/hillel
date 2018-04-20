@@ -6,6 +6,8 @@
 </head>
 <body>
 	<script type="text/javascript">
+
+	// Task 1
 	let firstNumber = '123';
 	let secondNumber = '999';
 
@@ -27,6 +29,56 @@
 	if (rest)
  	sum += rest;
 	console.log(sum.split('').reverse().join(''));
+
+	// Task 2
+	var userPassword = prompt('Enter a valid password');
+	if (userPassword !== null) {
+	   console.log(validatePassword (userPassword));
+	} else {
+	   console.log('Password is not entered');
+	}
+
+	function validatePassword (userPassword) {
+	  	let result = 'INVALID';
+	  	let isHavingDigits = false;
+	  	let isHavingSymbols = false;
+	  
+	  	if (userPassword.length < 6 || userPassword.length > 20) 
+	    	return result;
+
+	  	for (let i = 0; i < userPassword.length; i++) {
+	    	const charElementCode = userPassword[i].charCodeAt(0);
+	    	if ((charElementCode > 64 && charElementCode < 91) || (charElementCode > 96 && charElementCode < 123)) {
+	      		isHavingSymbols = true;
+	    	} else
+	      	if (charElementCode > 47 && charElementCode < 58) {
+	        	isHavingDigits = true;
+	      	} else return result;
+	  	}
+   		return  isHavingSymbols && isHavingSymbols ? 'VALID' : result;
+	}
+// Task 3
+	function checkNumber(n) {
+	  	let result = [];
+	  	result[0] = true;
+	  
+	  	if(n <= 0) {  	
+	    	result[0] = false;
+	  	} else {
+	    	for(var i = n-1; i > 1; i--) {
+	      		if (n % i === 0) {
+	        		result[0] = false;
+	        		break;
+	      		}
+	    	}
+	  	}
+	  	result[1] = (n % 2 === 0) ? true : false;
+	  
+	  	result[2] = (n % 10 === 0) ? true : false;
+	  
+	  	return result;
+	}
+	console.log(checkNumber(-10));
 	</script>
 </body>
 </html>
