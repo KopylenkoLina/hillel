@@ -88,15 +88,18 @@ body {
 
 html,
 body {
-  min-height: 100vh; }
+  height: 100%; }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; }
+  height: 100%; }
 
 .content {
-  flex: 1; }
+  flex: 1 0 auto; }
+
+.footer {
+  flex: 0 0 auto; }
 
 .header {
   position: relative;
@@ -660,6 +663,9 @@ span.hamburger-item {
   overflow: hidden; }
   .sidebar-on .footer {
     padding-left: 270px; }
+    @media screen and (min-width: 1281px) and (min-device-width: 1281px) {
+      .sidebar-on .footer {
+        padding: 20px; } }
   @media screen and (min-width: 760px) and (min-device-width: 760px) {
     .footer {
       text-align: left;
@@ -683,5 +689,12 @@ span.hamburger-item {
   @media screen and (min-width: 1281px) and (min-device-width: 1281px) {
     .footer .desk-right {
       float: right; } }
+  @media screen and (min-width: 1281px) and (min-device-width: 1281px) {
+    .footer {
+      position: fixed;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -5,18 +5,21 @@
 	text-align: center;
 	padding: 20px;
 	overflow: hidden;
-  .sidebar-on &{
+  	.sidebar-on & {
 		padding-left: 270px;
+		@include mQuery(desktop) {
+			padding: 20px;
+		}
 	}
-  @include mQuery(narrow_tablet) {
-  	text-align: left;
-  	padding: 20px 3%;
-  }
-	.link-wrap, .footer-link, .footer-text{
+  	@include mQuery(narrow_tablet) {
+	  	text-align: left;
+	  	padding: 20px 3%;
+  	}
+	.link-wrap, .footer-link, .footer-text {
     display: block;
-    @include mQuery(narrow_tablet) {
-    	display: inline-block;
-    }
+	    @include mQuery(narrow_tablet) {
+	    	display: inline-block;
+	    }
 	}
 	.footer-link:before {
 		@include mQuery(narrow_tablet) {
@@ -39,5 +42,13 @@
 		@include mQuery(desktop) {
 			float: right;
 		}
+	}
+	@include mQuery(desktop) {
+		position: fixed;
+		right: 0;
+	    left: 0;
+	    bottom: 0;
+	    z-index: 1;
+
 	}
 }

@@ -53,15 +53,18 @@ body {
 // Прижатие footer
 html,
 body {
-  min-height: 100vh;
+  height: 100%;
 }
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100%;
 }
 .content {
-  flex: 1;
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
 }
 
 
