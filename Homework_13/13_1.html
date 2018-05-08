@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  var complexFunction = function(arg1, arg2) { 
+    return arg1 + arg2;
+  };
+  
+  function cache(func) {
+    let resultsList = [];
+    return function() {
+      let args = [...arguments];
+      const isResultInCache = resultsList.find(result => result.firstArg === args[0] && result.secondArg === args[1])
+      if (!isResultInCache) {
+        const newResult = func(...args);
+        resultsList.push({ firstArg: args[0], secondArg: args[1], res: newResult });
+        console.log('calculating...');
+        console.log(newResult);
+      }
+      else {
+        console.log('from cache');
+        console.log(isResultInCache.res);
+      }
+      console.log(resultsList);
+    };
+  };
+
+  const cachedFunction = cache(complexFunction);
+
+  cachedFunction('foo', 'bar'); // функция должна быть выполнена
+  cachedFunction('foo', 'bar');  // функция НЕ должна быть выполнена
+  //                             // она возвращает результат из кеша
+  cachedFunction('foo', 'baz'); // функция должна быть выполнена
+  //                        // функция должна быть выполнена, потомучто  переданы   новые аргументы
+  // cachedFunction('foo', 'bar');
+  // cachedFunction('foo', 'bar');
+  cachedFunction('foo', 'baz');
+  // cachedFunction('foo', 'bazar');
+  </script>
+
+</body>
+</html>
