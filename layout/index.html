@@ -172,87 +172,89 @@
 						<p class="sidebar-title">Раздел</p>
 						<p class="sidebar-nav-link">
 							<a class="link-item" href="#">Введение<a/>
-						</a>
-						<h4 class="sidebar-title">Навигация по уроку</h4>
-						<nav class="sidebar-nav">
-							<ul class="sidebar-nav-links">
-								<li class="sidebar-nav-link">
-									<a class="link-item" href="#">Что такое JavaScript?</a>
-								</li>
-								<li class="sidebar-nav-link">
-									<a class="link-item" href="#">Что умеет JavaScript?</a>
-								</li>
-								<li class="sidebar-nav-link">
-									<a class="link-item" href="#">Что НЕ умеет JavaScript?</a>
-								</li>
-								<li class="sidebar-nav-link">
-									<a class="link-item" href="#">В чём уникальность JavaScript?</a>
-								</li>
-								<li class="sidebar-nav-link">
-									<a class="link-item" href="#">Тенденции развития</a>
-								</li>
-								<li class="sidebar-nav-link">
-									<a class="link-item" href="#">Альтернативные браузерные технологии</a>
-								</li>
-								<li class="sidebar-nav-link">
-									<a class="link-item" href="#">Языки поверх JavaScript</a>
-								</li>
-								<li class="sidebar-nav-link">
-									<a class="link-item" href="#">Итого</a>
-								</li>
-								<li class="sidebar-nav-link">
-									<a class="link-item" href="#">Коментарии</a>
-								</li>
-								<div class="social-icons">
-									<span class="share-item">Поделиться</span>
-									<a href="#" class="share twitter"></a>
-									<a href="#" class="share fb"></a>
-									<a href="#" class="share google"></a>
-									<a href="#" class="share vk"></a>
-								</div>
-							</ul>
-						</nav>
+							</a>
+							<h4 class="sidebar-title">Навигация по уроку</h4>
+							<nav class="sidebar-nav">
+								<ul class="sidebar-nav-links">
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Что такое JavaScript?</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Что умеет JavaScript?</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Что НЕ умеет JavaScript?</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">В чём уникальность JavaScript?</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Тенденции развития</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Альтернативные браузерные технологии</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Языки поверх JavaScript</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Итого</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Коментарии</a>
+									</li>
+									<div class="social-icons">
+										<span class="share-item">Поделиться</span>
+										<a href="#" class="share twitter"></a>
+										<a href="#" class="share fb"></a>
+										<a href="#" class="share google"></a>
+										<a href="#" class="share vk"></a>
+									</div>
+								</ul>
+							</nav>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<footer>
-			<div class="footer">
-				<div class="desk-left">
-					<p class="footer-text">© 2007—2018  Илья Кантор</p>
-					<nav class="link-wrap">
-						<a class="footer-link" target="_blank" href="https://learn.javascript.ru/about#contact-us">связаться с нами</a>
-						<a class="footer-link" target="_blank" href="https://learn.javascript.ru/about">о проекте</a>
-						<a class="footer-link" target="_blank" href="https://learn.javascript.ru/agreement">соглашение</a>
-						<a class="footer-link" target="_blank" href="http://slack.javascript.ru/">slack-чат</a>
-					</nav>
+			</section>
+			<footer>
+				<div class="footer">
+					<p id="timer">00.00.00</p>
+					<div class="desk-left">
+						<p class="footer-text">© 2007—2018  Илья Кантор</p>
+						<nav class="link-wrap">
+							<a class="footer-link" target="_blank" href="https://learn.javascript.ru/about#contact-us">связаться с нами</a>
+							<a class="footer-link" target="_blank" href="https://learn.javascript.ru/about">о проекте</a>
+							<a class="footer-link" target="_blank" href="https://learn.javascript.ru/agreement">соглашение</a>
+							<a class="footer-link" target="_blank" href="http://slack.javascript.ru/">slack-чат</a>
+						</nav>
+					</div>
+					<div class="desk-right">
+						<p>powered by <a href="#">node.js</a> & <a href="#">open sourse</a></p>
+					</div>
 				</div>
-				<div class="desk-right">
-					<p>powered by <a href="#">node.js</a> & <a href="#">open sourse</a></p>
-				</div>
-			</div>
-		</footer>
-	</div>
-	<script type="text/javascript">
-		$('#menu-toggle').click(function(){
-			$(this).toggleClass('open');
-			$('.container-main').toggleClass('has-overlay');
-		});
-		$('.screen-btn').click(function(){
-			$(this).toggleClass('active-btn');
-		});
-		let body = window.document.body;
-		$(window).on('scroll', function() {
-			let offsetTop = Math.abs(body.getBoundingClientRect().top);
-			if(Math.abs(offsetTop) <= 55) {
-				$('.sidebar-wrap').css({'top': 55 - offsetTop + 'px'});
-			}else {
-				$('.sidebar-wrap').css({'top': 0});
-			}
-		});
-		$('.toggle-sidebar').on('click', function(){
+			</footer>
+		</div>
+		<script src="js/main.js"></script>
+		<script type="text/javascript">
+			$('#menu-toggle').click(function(){
+				$(this).toggleClass('open');
+				$('.container-main').toggleClass('has-overlay');
+			});
+			$('.screen-btn').click(function(){
+				$(this).toggleClass('active-btn');
+			});
+			let body = window.document.body;
+			$(window).on('scroll', function() {
+				let offsetTop = Math.abs(body.getBoundingClientRect().top);
+				if(Math.abs(offsetTop) <= 55) {
+					$('.sidebar-wrap').css({'top': 55 - offsetTop + 'px'});
+				}else {
+					$('.sidebar-wrap').css({'top': 0});
+				}
+			});
+			$('.toggle-sidebar').on('click', function(){
 				$('.wrapper').toggleClass('sidebar-on');
-		})
-	</script>
-</body>
-</html>  
+			})
+		</script>
+	</body>
+	</html>  

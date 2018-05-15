@@ -697,4 +697,7 @@ span.hamburger-item {
       bottom: 0;
       z-index: 1; } }
 
+#timer {
+  text-align: right; }
+
 /*# sourceMappingURL=main.css.map */
