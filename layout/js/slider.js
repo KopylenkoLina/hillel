@@ -141,9 +141,6 @@ sliderButton1.addEventListener('click', e => {
 
 sliderButton2.addEventListener('click', e => {
   slider2.startLoop();
-  target2.addEventListener('mouseleave', e => {
-    slider2.startLoop();
-  });
 });
 
 
