@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css"></link>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>hillel</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="navbar">
+				<a class="logo" href="#"></a>
+				<div class="search-content"></div>
+				<div class="login-wrap"></div>
+				<div class="buy-book">
+					<a class="buy-link" href="#">
+						<span class="buy-extra">Купить</span>
+						EPUB/PDF
+					</a>
+				</div>
+				<div class="main-menu">
+					<nav class="navigation-menu">
+						<ul class="nav-list">
+							<li class="nav-item">
+								<a target="_blank" href="https://learn.javascript.ru/">
+									Учебник
+								</a>
+							</li>
+							<li class="nav-item">
+								<a target="_blank" href="#">
+									Курсы
+								</a>
+							</li>
+							<li class="nav-item">
+								<a target="_blank" href="#">
+									Форум
+								</a>
+							</li>
+							<li class="nav-item">
+								<a target="_blank" href="#">
+									ES5
+								</a>
+							</li>
+							<li class="nav-item">
+								<a target="_blank" href="#">
+									Тесты знаний
+								</a>
+							</li>
+							<li class="nav-item">
+								<a target="_blank" href="#">
+									Вакансии
+								</a>
+							</li>
+							<li class="nav-item screen">
+								<button class="screen-btn" target="_blank" href="#">
+									Скринкасты
+								</button>
+								<span class="start-box-arrow"></span>
+								<ul class="nav-sub-list">
+									<li>
+										<a target="_blank" href="#">
+											Node.js
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="#">
+											Webpack
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="#">
+											Gulp 4
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="#">
+											React.js
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<div id="menu-toggle">
+						<div id="hamburger">
+							<span class="hamburger-item"></span>
+							<span class="hamburger-item"></span>
+							<span class="hamburger-item"></span>
+						</div>
+						<div id="cross">
+							<span class="hamburger-item"></span>
+							<span class="hamburger-item"></span>
+						</div>
+					</div>
+					<div class="menu-navbar">
+						<div class="menu-item">
+							<div class="select-wrap">
+								<select class="select-mob">
+									<option>Учебник</option>
+									<option>Курсы</option>
+									<option>Форум</option>
+									<option>ES5</option>
+									<option>Тесты знаний</option>
+								</select>
+								<span class="start-box-arrow"></span>
+							</div>
+						</div>
+						<div class="menu-item">
+							<form>
+								<div class="src-wrap">
+									<input placeholder="Поиск в учебнике" class="src-input">
+									<button class="src-btn"></button>
+								</div>
+							</form>
+						</div>
+						<div class="menu-item">
+							<a href="#" class="nav-map">
+								<span>Карта учебника</span>
+							</a>
+						</div>
+						<div class="menu-item">
+							<div class="social-icons">
+								<span>Поделиться</span>
+								<a href="#" class="share twitter"></a>
+								<a href="#" class="share fb"></a>
+								<a href="#" class="share google"></a>
+								<a href="#" class="share vk"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</header>
+		<section class="content">
+			<div class="main-container">
+				<button class="toggle-sidebar"></button>
+				<div class="section-inner">
+					<div class="article-wrap">
+						<div id="slider1">
+						</div>
+						<div id="slider2">
+						</div>
+						<div id="table">
+						</div>
+						<!-- <h2 class="article-header">Введение в JavaScript</h2>
+						<p>Давайте посмотрим, что такого особенного в JavaScript, почему именно он, и какие еще технологии 	существуют, кроме JavaScript.
+						</p> -->
+						<!-- <h3 class="article-subheader">Что такое JavaScript?</h3>
+						<p>JavaScript изначально создавался для того, чтобы сделать web-странички «живыми». Программы на этом языке называются скриптами. В браузере они подключаются напрямую к HTML и, как только загружается страничка – тут же выполняются.</p>
+						<p>Программы на JavaScript – обычный текст. Они не требуют какой-то специальной подготовки.</p>
+						<p>В этом плане JavaScript сильно отличается от другого языка, который называется Java.</p>
+						<div class="article-important">
+							<h4>Почему JavaScript?</h4>
+							<p>Когда создавался язык JavaScript, у него изначально было другое название: «LiveScript». Но тогда был очень популярен язык Java, и маркетологи решили, что схожее название сделает новый язык более популярным.</p>
+							<p>Планировалось, что JavaScript будет эдаким «младшим братом» Java. Однако, история распорядилась по-своему, JavaScript сильно вырос, и сейчас это совершенно независимый язык, со своей спецификацией, которая называется ECMAScript, и к Java не имеет никакого отношения.</p>
+							<p>У него много особенностей, которые усложняют освоение, но по ходу учебника мы с ними разберёмся.
+							</p>
+						</div>
+						<p>JavaScript может выполняться не только в браузере, а где угодно, нужна лишь специальная программа – интерпретатор. Процесс выполнения скрипта называют «интерпретацией».</p>
+						<div class="article-important">
+							<h4>Компиляция и интерпретация, для программистов</h4>
+							<p>Для выполнения программ, не важно на каком языке, существуют два способа: «компиляция» и «интерпретация».</p>
+							<ul>
+								<li><i>Компиляция</i> – это когда исходный код программы, при помощи специального инструмента, другой программы, которая называется «компилятор», преобразуется в другой язык, как правило – в машинный код. Этот машинный код затем распространяется и запускается. При этом исходный код программы остаётся у разработчика.</li>
+								<li><i>Интерпретация</i> – это когда исходный код программы получает другой инструмент, который называют «интерпретатор», и выполняет его «как есть». При этом распространяется именно сам исходный код (скрипт). Этот подход применяется в браузерах для JavaScript.</li>
+							</ul>
+							<p>Современные интерпретаторы перед выполнением преобразуют JavaScript в машинный код или близко к нему, оптимизируют, а уже затем выполняют. И даже во время выполнения стараются оптимизировать. Поэтому JavaScript работает очень быстро.</p>
+						</div>
+						<p>Во все основные браузеры встроен интерпретатор JavaScript, именно поэтому они могут выполнять скрипты на странице. Но, разумеется, JavaScript можно использовать не только в браузере. Это полноценный язык, программы на котором можно запускать и на сервере, и даже в стиральной машинке, если в ней установлен соответствующий интерпретатор.
+						</p> -->
+					</div>
+				</div>
+				<div class="sidebar-wrap">
+					<div class="sidebar">
+						<p class="sidebar-title">Раздел</p>
+						<p class="sidebar-nav-link">
+							<a class="link-item" href="#">Введение<a/>
+							</a>
+							<h4 class="sidebar-title">Навигация по уроку</h4>
+							<nav class="sidebar-nav">
+								<ul class="sidebar-nav-links">
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Что такое JavaScript?</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Что умеет JavaScript?</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Что НЕ умеет JavaScript?</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">В чём уникальность JavaScript?</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Тенденции развития</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Альтернативные браузерные технологии</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Языки поверх JavaScript</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Итого</a>
+									</li>
+									<li class="sidebar-nav-link">
+										<a class="link-item" href="#">Коментарии</a>
+									</li>
+									<div class="social-icons">
+										<span class="share-item">Поделиться</span>
+										<a href="#" class="share twitter"></a>
+										<a href="#" class="share fb"></a>
+										<a href="#" class="share google"></a>
+										<a href="#" class="share vk"></a>
+									</div>
+									<button id="slider-btn-1" class="slider-btn"><span>Slider 1</span></button>
+									<button id="slider-btn-2" class="slider-btn"><span>Slider 2</span></button>
+									<button id="table-st-btn" class="table-st-btn">Student's form</button>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer>
+				<div class="footer">
+					<p id="timer">00.00.00</p>
+					<div class="desk-left">
+						<p class="footer-text">© 2007—2018  Илья Кантор</p>
+						<nav class="link-wrap">
+							<a class="footer-link" target="_blank" href="https://learn.javascript.ru/about#contact-us">связаться с нами</a>
+							<a class="footer-link" target="_blank" href="https://learn.javascript.ru/about">о проекте</a>
+							<a class="footer-link" target="_blank" href="https://learn.javascript.ru/agreement">соглашение</a>
+							<a class="footer-link" target="_blank" href="http://slack.javascript.ru/">slack-чат</a>
+						</nav>
+					</div>
+					<div class="desk-right">
+						<p>powered by <a href="#">node.js</a> & <a href="#">open sourse</a></p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="js/students-table.js"></script>
+		<script src="js/main.js"></script>
+		
+		<script type="text/javascript">
+			$('#menu-toggle').click(function(){
+				$(this).toggleClass('open');
+				$('.container-main').toggleClass('has-overlay');
+			});
+			$('.screen-btn').click(function(){
+				$(this).toggleClass('active-btn');
+			});
+			let body = window.document.body;
+			$(window).on('scroll', function() {
+				let offsetTop = Math.abs(body.getBoundingClientRect().top);
+				if(Math.abs(offsetTop) <= 55) {
+					$('.sidebar-wrap').css({'top': 55 - offsetTop + 'px'});
+				}else {
+					$('.sidebar-wrap').css({'top': 0});
+				}
+			});
+			$('.toggle-sidebar').on('click', function(){
+				$('.wrapper').toggleClass('sidebar-on');
+			})
+		</script>
+		<script src="js/slider.js"></script>
+
+	</body>
+	</html>  

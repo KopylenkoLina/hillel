@@ -3,3 +3,13 @@
 .idea
 
 .DS_store
+
+layout/node_modules
+
+layout/.bowerrc
+
+layout/gulpfile.js
+
+layout/package.json
+
+layout/package-lock.json
